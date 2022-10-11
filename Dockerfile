@@ -19,8 +19,8 @@ EXPOSE 6969
 
 COPY . .
 
-RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt && chmod -R 777 ./
 
 VOLUME ["/usr/app/models"]
 
-CMD ["./run.sh"]
+ENTRYPOINT ["./run.sh"]
