@@ -25,10 +25,10 @@ jobs:
           key: ${{ runner.os }}-pnpm7-${{ hashFiles('**/pnpm-lock.yaml') }}
 
       - name: Setup dependencies
-        run: cd frontend-src && pnpm install
+        run: cd frontend-src && corepack pnpm install
 
       - name: Run build
-        run: cd frontend-src && pnpm run build
+        run: cd frontend-src && corepack pnpm run build
 
       - name: To static
         run: rm -rf ./static && mv ./frontend-src/build ./static
