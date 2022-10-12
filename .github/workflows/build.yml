@@ -31,7 +31,7 @@ jobs:
         run: cd frontend-src && corepack pnpm run build
 
       - name: To static
-        run: rm -rf ./static && mv ./frontend-src/build ./static
+        run: pwd && rm -rf ./static && mv ./frontend-src/build ./static && ls -alh
 
       - name: Docker Meta
         id: meta
