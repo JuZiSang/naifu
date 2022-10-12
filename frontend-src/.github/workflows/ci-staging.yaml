@@ -1,0 +1,66 @@
+name: CI Staging
+
+on:
+  push:
+    branches:
+      - "staging"
+    paths-ignore:
+      - ".github/**"
+      - "**/*.md"
+jobs:
+
+  ci:
+
+    name: CI Staging
+    runs-on: ubuntu-latest
+
+    env:
+      NOVELAI_MOCK_ENV: false
+      NOVELAI_BACKEND_URL: ${{ secrets.MAIN_BACKEND_URL }}
+      NOVELAI_RECAPTCHA_KEY: ${{ secrets.NOVELAI_RECAPTCHA_KEY }}
+      NOVELAI_PADDLE_SANDBOX: false
+      NOVELAI_PADDLE_VENDOR_ID: ${{ secrets.NOVELAI_PADDLE_VENDOR_ID }}
+      NOVELAI_PADDLE_OPUS_ID: ${{ secrets.NOVELAI_PADDLE_OPUS_ID }}
+      NOVELAI_PADDLE_SCROLL_ID: ${{ secrets.NOVELAI_PADDLE_SCROLL_ID }}
+      NOVELAI_PADDLE_TABLET_ID: ${{ secrets.NOVELAI_PADDLE_TABLET_ID }}
+      NOVELAI_PADDLE_GIFTKEY_OPUS_ID: ${{ secrets.NOVELAI_PADDLE_GIFTKEY_OPUS_ID }}
+      NOVELAI_PADDLE_GIFTKEY_SCROLL_ID: ${{ secrets.NOVELAI_PADDLE_GIFTKEY_SCROLL_ID }}
+      NOVELAI_PADDLE_GIFTKEY_TABLET_ID: ${{ secrets.NOVELAI_PADDLE_GIFTKEY_TABLET_ID }}
+      NOVELAI_ENVIRONMENT: ${{ secrets.NOVELAI_ENVIRONMENT }}
+      NOVELAI_SENTRY_DSN: ${{ secrets.NOVELAI_SENTRY_DSN }}
+      SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          check-latest: true
+
+      - name: Setup cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.local/share/pnpm/store
+          key: ${{ runner.os }}-pnpm7-${{ hashFiles('**/pnpm-lock.yaml') }}
+
+      - name: Setup dependencies
+        run: corepack pnpm install
+
+      - name: Run tests
+        run: corepack pnpm run check:test:ci
+
+      - name: Run build
+        run: corepack pnpm run build
+
+      - name: Deploy
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: git@github.com:NovelAI/novelai.github.io
+          BRANCH: gh-pages
+          FOLDER: build
+          SKIP_EMPTY_COMMITS: true
+          CLEAR_GLOBS_FILE: '.clearglobs'
+          SSH_PRIVATE_KEY: ${{ secrets.DEPLOYMENT_SECRET_KEY }}

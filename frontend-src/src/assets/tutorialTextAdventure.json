@@ -1,0 +1,443 @@
+{
+    "storyContainerVersion": 1,
+    "metadata": {
+        "storyMetadataVersion": 1,
+        "id": "e1a8c20f-1589-4e24-a4ff-b14a1af113f4",
+        "title": "Text Adventure Tutorial: Crystal Dragon Encounter ",
+        "description": "Your Text Adventure Tutorial Encounter! \nBattle a crystal dragon alongside your witch companion Galena while you learn how to control NovelAI! ",
+        "textPreview": "",
+        "favorite": false,
+        "tags": [
+            "tutorial",
+            "fantasy",
+            "witch",
+            "battle",
+            "dragon"
+        ],
+        "createdAt": 1638427209742,
+        "lastUpdatedAt": 1638427209743,
+        "isModified": true
+    },
+    "content": {
+        "storyContentVersion": 4,
+        "settings": {
+            "parameters": {
+                "temperature": 0.72,
+                "max_length": 40,
+                "min_length": 1,
+                "top_k": 0,
+                "top_p": 0.725,
+                "tail_free_sampling": 1,
+                "repetition_penalty": 2.75,
+                "repetition_penalty_range": 2048,
+                "repetition_penalty_slope": 0.18,
+                "bad_words_ids": [],
+                "logit_bias_groups": []
+            },
+            "preset": "default-genesis",
+            "trimResponses": true,
+            "banBrackets": true,
+            "prefix": "theme_textadventure",
+            "dynamicPenaltyRange": false,
+            "prefixMode": 1,
+            "model": "euterpe-v2"
+        },
+        "story": {
+            "version": 2,
+            "step": 1,
+            "datablocks": [
+                {
+                    "nextBlock": [
+                        1
+                    ],
+                    "prevBlock": -1,
+                    "origin": "root",
+                    "startIndex": 0,
+                    "endIndex": 0,
+                    "dataFragment": {
+                        "data": "",
+                        "origin": "root"
+                    },
+                    "fragmentIndex": -1,
+                    "removedFragments": [],
+                    "chain": false
+                },
+                {
+                    "nextBlock": [],
+                    "prevBlock": 0,
+                    "origin": "prompt",
+                    "startIndex": 0,
+                    "endIndex": 0,
+                    "dataFragment": {
+                        "data": "The splendor before your eyes left you breathless, the vaulted ceiling painted with scenes from an ancient tale; tapestries that stretched across three walls depicting tales of heroes long dead.\nHowever, as fate would have it, you were thoroughly distracted by the flurry of magic explosions obliterating yout vision every time a magic spell hit its target: the dragon. After all, you were a mere human in the company of two magical beings, your companion Galena, a witch, and a fearsome crystal dragon. Your presence here was not only an honor but also a grave danger.\n\"You know what to do, right?!\" Galena shouted at you as she threw another fireball at the dragon's head.\nYou have been tasked with assisting Galena on this quest to save the world from the evil of a dragon. But how could you possibly help? ",
+                        "origin": "prompt"
+                    },
+                    "fragmentIndex": 1,
+                    "removedFragments": [],
+                    "chain": false
+                }
+            ],
+            "currentBlock": 1,
+            "fragments": [
+                {
+                    "data": "",
+                    "origin": "root"
+                },
+                {
+                    "data": "The splendor before your eyes left you breathless, the vaulted ceiling painted with scenes from an ancient tale; tapestries that stretched across three walls depicting tales of heroes long dead.\nHowever, as fate would have it, you were thoroughly distracted by the flurry of magic explosions obliterating your vision every time a magic spell hit its target: the dragon. After all, you were a mere human in the company of two magical beings, your companion Galena, a witch, and a fearsome crystal dragon. Your presence here was not only an honor but also a grave danger.\n\"You know what to do, right?!\" Galena shouted at you as she threw another fireball at the dragon's head.\nYou have been tasked with assisting Galena on this quest to save the world from the evil of a dragon. But how could you possibly help? ",
+                    "origin": "prompt"
+                }
+            ]
+        },
+        "context": [
+            {
+                "text": "This is an epic fantasy story. You and your witch companion, Galena, are tasked to defeat a crystal dragon to protect the kingdom.",
+                "contextConfig": {
+                    "prefix": "",
+                    "suffix": "\n",
+                    "tokenBudget": 2048,
+                    "reservedTokens": 0,
+                    "budgetPriority": 800,
+                    "trimDirection": "trimBottom",
+                    "insertionType": "newline",
+                    "maximumTrimType": "sentence",
+                    "insertionPosition": 0
+                }
+            },
+            {
+                "text": "[ style: verbose Tags: epic, fantasy]\nYour witch companion, Galena, is currently fighting a crystal dragon.",
+                "contextConfig": {
+                    "prefix": "",
+                    "suffix": "\n",
+                    "tokenBudget": 2048,
+                    "reservedTokens": 2048,
+                    "budgetPriority": -400,
+                    "trimDirection": "trimBottom",
+                    "insertionType": "newline",
+                    "maximumTrimType": "sentence",
+                    "insertionPosition": -4
+                }
+            }
+        ],
+        "lorebook": {
+            "lorebookVersion": 3,
+            "entries": [
+                {
+                    "text": "Galena, the witch of the tower. Galena's eyes are obscured by a translucent ribbon that drapes across her face like a veil and is braided into her long, luscious hair. The religious sect of Simja used to keep Galena confined to the tower for her whole life until her marriage to the king. Once free, Galena discovered her magical powers she employs to protect the kingdom from all types of magical enemies.",
+                    "contextConfig": {
+                        "prefix": "",
+                        "suffix": "\n",
+                        "tokenBudget": 2048,
+                        "reservedTokens": 0,
+                        "budgetPriority": 400,
+                        "trimDirection": "trimBottom",
+                        "insertionType": "newline",
+                        "maximumTrimType": "sentence",
+                        "insertionPosition": -1
+                    },
+                    "lastUpdatedAt": 1638423588371,
+                    "displayName": "Galena the witch of the tower",
+                    "id": "74180e75-5c1d-415c-9b35-8dd7cb7428f3",
+                    "keys": [
+                        "Galena",
+                        "witch",
+                        "ribbon",
+                        "tower"
+                    ],
+                    "searchRange": 1000,
+                    "enabled": true,
+                    "forceActivation": false,
+                    "keyRelative": false,
+                    "nonStoryActivatable": false,
+                    "category": "4be2c28c-a715-47e0-abf5-830172b67ede",
+                    "loreBiasGroups": [
+                        {
+                            "phrases": [
+                                {
+                                    "sequences": [
+                                        [
+                                            16365
+                                        ]
+                                    ],
+                                    "type": 2
+                                },
+                                {
+                                    "sequences": [
+                                        [
+                                            29092
+                                        ]
+                                    ],
+                                    "type": 2
+                                },
+                                {
+                                    "sequences": [
+                                        [
+                                            30615
+                                        ]
+                                    ],
+                                    "type": 2
+                                }
+                            ],
+                            "bias": 0.07,
+                            "ensure_sequence_finish": false,
+                            "generate_once": true,
+                            "enabled": true,
+                            "whenInactive": false
+                        }
+                    ]
+                },
+                {
+                    "text": "The religion of Simja is a mighty entity with a firm hold over their own military. Strange history led to a custom of raising witches in the mighty tower structure of a sprawling religious stronghold, Simja. The witch of the tower is forbidden to ever leave the stronghold and forbidden all outside contact until their weddings to whichever king can convince them to provide fortitude and advancements to their creed. The women raised within the stronghold of Simja are infused with magical powers. ",
+                    "contextConfig": {
+                        "prefix": "",
+                        "suffix": "\n",
+                        "tokenBudget": 2048,
+                        "reservedTokens": 0,
+                        "budgetPriority": 400,
+                        "trimDirection": "trimBottom",
+                        "insertionType": "newline",
+                        "maximumTrimType": "sentence",
+                        "insertionPosition": -1
+                    },
+                    "lastUpdatedAt": 1633478891368,
+                    "displayName": "Simja",
+                    "id": "2cca700d-9599-48d3-81e0-dd800bf2e834",
+                    "keys": [
+                        "Simja",
+                        "religion",
+                        "creed",
+                        "magic",
+                        "tower"
+                    ],
+                    "searchRange": 1000,
+                    "enabled": true,
+                    "forceActivation": false,
+                    "keyRelative": false,
+                    "nonStoryActivatable": false,
+                    "category": "",
+                    "loreBiasGroups": [
+                        {
+                            "phrases": [],
+                            "bias": 0,
+                            "ensure_sequence_finish": false,
+                            "generate_once": true,
+                            "enabled": true,
+                            "whenInactive": false
+                        }
+                    ]
+                },
+                {
+                    "text": "Crystal dragons were created from the corpses of defeated wyverns when ancient kingdoms fell under demonic influence during the Great War. These beasts possess incredible strength coupled with magical powers. Their scales are covered in crystal shards that give them both physical protection and mystical properties. They are magnificent in their appearance.",
+                    "contextConfig": {
+                        "prefix": "",
+                        "suffix": "\n",
+                        "tokenBudget": 2048,
+                        "reservedTokens": 0,
+                        "budgetPriority": 400,
+                        "trimDirection": "trimBottom",
+                        "insertionType": "newline",
+                        "maximumTrimType": "sentence",
+                        "insertionPosition": -1
+                    },
+                    "lastUpdatedAt": 1638423622779,
+                    "displayName": "Crystal Dragon",
+                    "id": "9232c7f8-d128-4c1e-b201-29ecc825afd7",
+                    "keys": [
+                        "crystal",
+                        "sparkle",
+                        "dragon",
+                        "wyvern",
+                        "beast"
+                    ],
+                    "searchRange": 1000,
+                    "enabled": true,
+                    "forceActivation": false,
+                    "keyRelative": false,
+                    "nonStoryActivatable": false,
+                    "category": "4be2c28c-a715-47e0-abf5-830172b67ede",
+                    "loreBiasGroups": [
+                        {
+                            "phrases": [
+                                {
+                                    "sequences": [
+                                        [
+                                            10441
+                                        ]
+                                    ],
+                                    "type": 2
+                                }
+                            ],
+                            "bias": 0.07,
+                            "ensure_sequence_finish": false,
+                            "generate_once": true,
+                            "enabled": true,
+                            "whenInactive": false
+                        }
+                    ]
+                }
+            ],
+            "settings": {
+                "orderByKeyLocations": false
+            },
+            "categories": [
+                {
+                    "name": "Characters",
+                    "id": "4be2c28c-a715-47e0-abf5-830172b67ede",
+                    "enabled": true,
+                    "createSubcontext": false,
+                    "subcontextSettings": {
+                        "text": "",
+                        "contextConfig": {
+                            "prefix": "",
+                            "suffix": "\n",
+                            "tokenBudget": 2048,
+                            "reservedTokens": 0,
+                            "budgetPriority": 400,
+                            "trimDirection": "trimBottom",
+                            "insertionType": "newline",
+                            "maximumTrimType": "sentence",
+                            "insertionPosition": -1
+                        },
+                        "lastUpdatedAt": 1633483574108,
+                        "displayName": "New Lorebook Entry",
+                        "id": "5a862bc7-f541-4812-bec6-e8ecc8ff6425",
+                        "keys": [],
+                        "searchRange": 1000,
+                        "enabled": true,
+                        "forceActivation": false,
+                        "keyRelative": false,
+                        "nonStoryActivatable": false,
+                        "category": "",
+                        "loreBiasGroups": [
+                            {
+                                "phrases": [],
+                                "bias": 0,
+                                "ensure_sequence_finish": false,
+                                "generate_once": true,
+                                "enabled": true,
+                                "whenInactive": false
+                            }
+                        ]
+                    },
+                    "useCategoryDefaults": true,
+                    "categoryDefaults": {
+                        "text": "",
+                        "contextConfig": {
+                            "prefix": "",
+                            "suffix": "\n",
+                            "tokenBudget": 2048,
+                            "reservedTokens": 0,
+                            "budgetPriority": 400,
+                            "trimDirection": "trimBottom",
+                            "insertionType": "newline",
+                            "maximumTrimType": "sentence",
+                            "insertionPosition": -1
+                        },
+                        "lastUpdatedAt": 1633478644543,
+                        "displayName": "New Lorebook Entry",
+                        "id": "3aefc0bd-f98d-48da-81ea-4c2cd48db082",
+                        "keys": [],
+                        "searchRange": 1000,
+                        "enabled": true,
+                        "forceActivation": false,
+                        "keyRelative": false,
+                        "nonStoryActivatable": false,
+                        "category": "",
+                        "loreBiasGroups": [
+                            {
+                                "phrases": [],
+                                "bias": 0,
+                                "ensure_sequence_finish": false,
+                                "generate_once": true,
+                                "enabled": true,
+                                "whenInactive": false
+                            }
+                        ]
+                    },
+                    "categoryBiasGroups": [
+                        {
+                            "phrases": [],
+                            "bias": 0,
+                            "ensure_sequence_finish": false,
+                            "generate_once": true,
+                            "enabled": true,
+                            "whenInactive": false
+                        }
+                    ]
+                }
+            ]
+        },
+        "storyContextConfig": {
+            "prefix": "",
+            "suffix": "",
+            "tokenBudget": 2048,
+            "reservedTokens": 512,
+            "budgetPriority": 0,
+            "trimDirection": "trimTop",
+            "insertionType": "newline",
+            "maximumTrimType": "sentence",
+            "insertionPosition": -1
+        },
+        "ephemeralContext": [],
+        "contextDefaults": {
+            "ephemeralDefaults": [
+                {
+                    "text": "",
+                    "contextConfig": {
+                        "prefix": "",
+                        "suffix": "\n",
+                        "tokenBudget": 2048,
+                        "reservedTokens": 2048,
+                        "budgetPriority": -10000,
+                        "trimDirection": "doNotTrim",
+                        "insertionType": "newline",
+                        "maximumTrimType": "newline",
+                        "insertionPosition": -2
+                    },
+                    "startingStep": 1,
+                    "delay": 0,
+                    "duration": 1,
+                    "repeat": false,
+                    "reverse": false
+                }
+            ],
+            "loreDefaults": [
+                {
+                    "text": "",
+                    "contextConfig": {
+                        "prefix": "",
+                        "suffix": "\n",
+                        "tokenBudget": 2048,
+                        "reservedTokens": 0,
+                        "budgetPriority": 400,
+                        "trimDirection": "trimBottom",
+                        "insertionType": "newline",
+                        "maximumTrimType": "sentence",
+                        "insertionPosition": -1
+                    },
+                    "lastUpdatedAt": 1638426392041,
+                    "displayName": "New Lorebook Entry",
+                    "id": "28c0770d-65f6-4d82-bef0-89e7da579ee8",
+                    "keys": [],
+                    "searchRange": 1000,
+                    "enabled": true,
+                    "forceActivation": false,
+                    "keyRelative": false,
+                    "nonStoryActivatable": false,
+                    "category": "",
+                    "loreBiasGroups": [
+                        {
+                            "phrases": [],
+                            "bias": 0,
+                            "ensure_sequence_finish": false,
+                            "generate_once": true,
+                            "enabled": true,
+                            "whenInactive": false
+                        }
+                    ]
+                }
+            ]
+        },
+        "settingsDirty": false
+    }
+}

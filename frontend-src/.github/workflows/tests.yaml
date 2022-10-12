@@ -1,0 +1,38 @@
+name: Tests & Checks
+
+on:
+  pull_request:
+    paths-ignore:
+      - ".github/**"
+      - "**/*.md"
+jobs:
+
+  tests:
+
+    name: Tests & Checks
+    runs-on: ubuntu-latest
+
+    env:
+      NOVELAI_MOCK_ENV: true
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          check-latest: true
+
+      - name: Setup cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.local/share/pnpm/store
+          key: ${{ runner.os }}-pnpm7-${{ hashFiles('**/pnpm-lock.yaml') }}
+
+      - name: Setup dependencies
+        run: corepack pnpm install
+
+      - name: Run tests & checks
+        run: corepack pnpm run check

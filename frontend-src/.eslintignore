@@ -1,0 +1,10 @@
+*.*
+!**/*.js
+!**/*.jsx
+!**/*.mjs
+!**/*.cjs
+!**/*.ts
+!**/*.tsx
+node_modules/**/*
+build/**/*
+public/js/*

@@ -9,6 +9,30 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout source
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          check-latest: true
+
+      - name: Setup cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.local/share/pnpm/store
+          key: ${{ runner.os }}-pnpm7-${{ hashFiles('**/pnpm-lock.yaml') }}
+
+      - name: Setup dependencies
+        run: cd frontend-src && pnpm install
+
+      - name: Run build
+        run: cd frontend-src && pnpm run build
+
+      - name: To static
+        run: rm -rf ./static && mv ./frontend-src/build ./static
+
       - name: Docker Meta
         id: meta
         uses: docker/metadata-action@v4
