@@ -24,4 +24,6 @@ else
     PYTHON=python
 fi
 
+cat ./static/version
+
 $PYTHON -m uvicorn --host 0.0.0.0 --port=6969 main:app & ./bore local 6969 --to bore.pub
