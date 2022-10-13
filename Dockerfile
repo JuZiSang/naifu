@@ -21,6 +21,4 @@ COPY . .
 
 RUN pip install -r requirements.txt && chmod -R 777 ./
 
-VOLUME ["/usr/app/models"]
-
 ENTRYPOINT ["./run.sh"]
