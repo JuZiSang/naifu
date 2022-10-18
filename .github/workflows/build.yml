@@ -37,7 +37,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: juzisang/ai-pixiv
+          images: juzisang/naifu
           flavor: |
             latest=true
           tags: |
