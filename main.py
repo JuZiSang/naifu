@@ -189,6 +189,7 @@ def generate(request: GenerationRequest, authorized: bool = Depends(verify_token
             output = io.BytesIO()
             image.save(output, format='PNG', pnginfo=metadata)
             image = output.getvalue()
+            output.close()
             if config.savefiles:
                 saveimage(image, request)
             #get base64 of image
